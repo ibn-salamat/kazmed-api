@@ -1,5 +1,5 @@
+import { Controller, Get, Render } from '@nestjs/common';
 import { DoctorType } from './data/doctors';
-import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -7,8 +7,9 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getInfo(): string {
-    return this.appService.getInfo();
+  @Render('index')
+  root() {
+    return { message: 'Doctors list: GET = /api/doctors returns DoctorType[]' };
   }
 
   @Get('/api/doctors')

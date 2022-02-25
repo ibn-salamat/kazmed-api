@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazmed API - info</title>
+
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+        }
+
+        body>* {
+            margin-left: 25%;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2499ff;
+            display: inline-block;
+            border-bottom: 2px solid #2499ff;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>{{message}}</h1>
+
+    <pre>
+
+    <code>
+type DoctorType = {
+fullname: string;
+class: string; // type of doctor
+email: string;
+
+address?: {
+    longitude: string;
+    latitude: string;
+};
+
+rating: number;
+profileImgUrl?: string;
+
+additionalInfo: {
+    about?: string;
+    qualifications?: string[];
+    services?: string[];
+    reviews: ReviewType[];
+    fees?: any;
+};
+}
+    </code>
+
+    <code>
+type ReviewType = {
+username: string;
+comment: string;
+datePublish: Date;
+};
+    </code>
+    
+  </pre>
+
+    <h2>Source: <a href="https://github.com/ibn-salamat/kazmed-api">GitHub</a> </h2>
+
+</body>
+
+</html>
